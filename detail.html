@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>%{Element}%</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Century Gothic';
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        background: #00a3e8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .box{
+        background: #00a3e8;
+        width: 50%;
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: .3s ease;
+        border: 1px solid #fff;
+        color: #fff;
+    }
+    .box h1{
+        margin-bottom: 20px;
+    }
+    .box span{
+        margin-bottom: 10px;
+    }
+    .box .figure{
+        height: 200px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .n-shell{
+        height: 150px;
+        width: 150px;
+        border: 1px solid #fff;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .m-shell{
+        height: 120px;
+        width: 120px;
+        border: 1px solid #fff;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .l-shell{
+        height: 80px;
+        width: 80px;
+        border: 1px solid #fff;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .k-shell{
+        height: 50px;
+        width: 50px;
+        border: 1px solid #fff;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .proton{
+        height: 10px;
+        width: 10px;
+        background: #fff;
+        border-radius: 50px;
+    }
+</style>
+<body>
+    <div class="box">
+        <h1>%{Element}%</h1>
+        <h2>%{Symbol}%</h2>
+        <div class="figure">
+            <div class="n-shell">
+                <div class="m-shell">
+                    <div class="l-shell">
+                        <div class="k-shell">
+                            <div class="proton"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="electronicconfig">
+            %{config}%
+        </span>
+        <span class="atomicno">Atomic No: %{atomicno}%</span>
+    </div>
+</body>
+</html>

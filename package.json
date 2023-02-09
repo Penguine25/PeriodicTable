@@ -1,0 +1,15 @@
+{
+  "name": "periodic-table",
+  "version": "1.0.0",
+  "description": "Periodic Table",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Penguine",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}

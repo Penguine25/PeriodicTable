@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Century Gothic';
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        background: #00a3e8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .table{
+        height: 90vh;
+        width: 90%;
+        padding: 20px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+    }
+    #box1,#box2,#box3,#box4,#box5,#box6,#box7,#box8,#box9,#box10,#box11,#box12,#box13,#box14,#box15,#box16,#box17,#box18,#box19,#box20{
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+    #box1:hover,#box2:hover,#box3:hover,#box4:hover,#box5:hover,#box6:hover,#box7:hover,#box8:hover,#box9:hover,#box10:hover,#box11:hover,#box12:hover,#box13:hover,#box14:hover,#box15:hover,#box16:hover,#box17:hover,#box18:hover,#box19:hover,#box20:hover{
+        color: #00a3e8;
+        background: #fff;
+        transition: .3s ease;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="table">
+        <div id="box1" onclick="window.location='/1';"><h2>Symbol</h2></div>
+        <div id="box2" onclick="window.location='/2';"><h2>Symbol</h2></div>
+        <div id="box3" onclick="window.location='/3';"><h2>Symbol</h2></div>
+        <div id="box4" onclick="window.location='/4';"><h2>Symbol</h2></div>
+        <div id="box5" onclick="window.location='/5';"><h2>Symbol</h2></div>
+        <div id="box6" onclick="window.location='/6';"><h2>Symbol</h2></div>
+        <div id="box7" onclick="window.location='/7';"><h2>Symbol</h2></div>
+        <div id="box8" onclick="window.location='/8';"><h2>Symbol</h2></div>
+        <div id="box9" onclick="window.location='/9';"><h2>Symbol</h2></div>
+        <div id="box10" onclick="window.location='/10'";><h2>Symbol</h2></div>
+        <div id="box11" onclick="window.location='/11';"><h2>Symbol</h2></div>
+        <div id="box12" onclick="window.location='/12';"><h2>Symbol</h2></div>
+        <div id="box13" onclick="window.location='/13';"><h2>Symbol</h2></div>
+        <div id="box14" onclick="window.location='/14';"><h2>Symbol</h2></div>
+        <div id="box15" onclick="window.location='/15';"><h2>Symbol</h2></div>
+        <div id="box16" onclick="window.location='/16';"><h2>Symbol</h2></div>
+        <div id="box17" onclick="window.location='/17';"><h2>Symbol</h2></div>
+        <div id="box18" onclick="window.location='/18';"><h2>Symbol</h2></div>
+        <div id="box19" onclick="window.location='/19';"><h2>Symbol</h2></div>
+        <div id="box20" onclick="window.location='/20';"><h2>Symbol</h2></div>
+    </div>
+    <script>
+        var arr = [];
+        for(let i=1; i<=20; i++){
+            arr.push(`box${i}`);
+        }
+        // console.log(arr);
+        var e = ['H','He','Li','Be','B','C','N','O','F','Ne','Na','Mg','Al','Si','P','S','Cl','Ar','K','Ca'];
+        for(let i=1; i<=arr.length; i++){
+            let box = document.getElementById(arr[i-1]);
+            box.firstChild.innerHTML = e[i-1];
+        }
+    </script>
+</body>
+</html>
